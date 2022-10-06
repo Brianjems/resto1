@@ -22,12 +22,14 @@
 
 html {
     font-size: 62.5%;
+    overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
 
 }
 body {
     background: #f7f7f7;
+    width: 100%;
 }
 
 header {
@@ -46,9 +48,9 @@ section {
     padding: 2rem 9%;
 }
 .heading {
-    text-align: center;
-    font-size: 3.5rem;
-    padding: 1rem;
+    text-align:center;
+    font-size:3.5rem;
+    padding:1rem;
     color: #666;
 }
 .heading span {
@@ -119,7 +121,9 @@ header .navbar a:hover {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
+    width: 100%;
     min-height: 100vh;
+    min-width: none;
     align-items: center;
     background: url(./images/home-bg.jpg) no-repeat;
     background-size: cover;
@@ -196,7 +200,7 @@ header .navbar a:hover {
 .speciality .box-container .box .content p {
     font-size: 1.6rem;
     color: #666;
-    padding: 1rem;
+    padding: 1rem 0;
 }
 .speciality .box-container .box:hover .image {
     top:0;
@@ -470,16 +474,33 @@ header .navbar a:hover {
 @media(max-width:991px) {
     html{
         font-size: 55%;
+        width: 100%;
+
     }
     header{
-        padding: 2rem;
+        padding-left:2rem;
+
     }
     section {
-        padding: 5rem;
+        padding:15rem;
     }
+
+    #scroll-top {
+        right: 5rem;
+
+    }
+   
+
+   
+    
+
 }
 
 @media(max-width:768px) {
+    html {
+        width: 100%;
+        font-size: 40%;
+    }
     #menu-bar{
         display: initial;
     }
@@ -503,13 +524,30 @@ header .navbar a:hover {
         border-left: .5rem solid var(--red);
         background: #fff;
     }
+    .body {
+        width: 100%;
+    }
+    #scroll-top {
+        right: 5rem;
+
+    }
+    .box {
+        width: 100%;
+    }
+   
+  
 }
 
-@media(max-width:300px) {
+@media(max-width:450px) {
     html{
         font-size: 50%;
     }
     .order .row form .inputBox input {
         width: 100%;
     }
+    .box {
+        width: 100%;
+    }
+    
+
 }
